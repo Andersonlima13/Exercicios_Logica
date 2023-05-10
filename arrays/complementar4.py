@@ -8,8 +8,7 @@ repetidos = []
 for i in range(n):
     num = int(input("digite o valor a ser adcionado no vetor :  "))  
     vetor = vetor + [num]
-if num in vetor == i:
-    print("igua")
+
     
 
 print(vetor)
