@@ -8,7 +8,7 @@ linhas = int(input("digite o numero de linhas e colunas : "))
 colunas = linhas
 
 
-principal = [[None]]
+
 Matriz = [[None] * colunas for i in range(linhas)]
 
 
