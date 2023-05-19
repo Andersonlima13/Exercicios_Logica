@@ -7,7 +7,8 @@ igual a 1. Por exemplo, a matriz seguinte é uma matriz de permutação.
 Com base na definição apresentada, escreva um programa que preencha uma
 matriz quadrada com valores fornecidos pelo usuário, determine e mostre se
 ela é uma matriz de permutação.'''
-
+conti = 0
+contj = 0
 
 valor = int(input("digite o valor para linhas e colunas"))
 
@@ -17,4 +18,14 @@ for i in range(valor):
     for j in range(valor):
         matriz[i][j] = int(input(f"digite o valor para o elemento i[{i}] e j[{j}]"))
 
-print(matriz)
+for i in range(valor):
+    if i == 1:
+        conti =+1
+        for j in range(valor):
+            if j ==1:
+                contj =+1
+
+if contj or conti > 1:
+    print("n é permutação")
+          
+        
