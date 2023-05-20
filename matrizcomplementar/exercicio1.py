@@ -18,14 +18,15 @@ for i in range(valor):
     for j in range(valor):
         matriz[i][j] = int(input(f"digite o valor para o elemento i[{i}] e j[{j}]"))
 
-for i in range(valor):
-    if i == 1:
-        conti =+1
-        for j in range(valor):
-            if j ==1:
-                contj =+1
 
-if contj or conti > 1:
-    print("n é permutação")
-          
+for i in range(valor):
+    colunas_soma = 0
+    linhas_soma = 0
+    for j in range(valor):
+        colunas_soma += matriz[i][j]
+        linhas_soma += matriz[j][i]
+    if colunas_soma != 1 or linhas_soma != 1:
+       print("é permutação")
+
+
         
