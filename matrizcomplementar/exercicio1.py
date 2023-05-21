@@ -7,26 +7,50 @@ igual a 1. Por exemplo, a matriz seguinte é uma matriz de permutação.
 Com base na definição apresentada, escreva um programa que preencha uma
 matriz quadrada com valores fornecidos pelo usuário, determine e mostre se
 ela é uma matriz de permutação.'''
-conti = 0
-contj = 0
-
-valor = int(input("digite o valor para linhas e colunas"))
-
-matriz = [[None]* valor for i in range(valor) ]
-
-for i in range(valor):
-    for j in range(valor):
-        matriz[i][j] = int(input(f"digite o valor para o elemento i[{i}] e j[{j}]"))
+# Testando as linhas
 
 
-for i in range(valor):
-    colunas_soma = 0
-    linhas_soma = 0
-    for j in range(valor):
-        colunas_soma += matriz[i][j]
-        linhas_soma += matriz[j][i]
-    if colunas_soma != 1 or linhas_soma != 1:
-       print("é permutação")
+n = int(input('Digite a ordem da matriz: '))
 
+# Criação da matriz com valores nulos
+matriz = [[None]*n for i in range(n)]
 
-        
+# Leitura dos elementos da matriz
+print('\nDigite os elementos da matriz (0 ou 1):')
+for i in range(n):
+    for j in range(n):
+        matriz[i][j] = int(input(f'digite um valor para I[{i}] e J[{j}]: '))
+
+# Exibição da matriz 
+print('\nMatriz:')
+for i in range(n):
+    for j in range(n):
+        print(f'{matriz[i][j]:4}',end='')
+    print()
+
+# Testando as linhas
+teste_lin = True
+for i in range(n):
+    cont = 0
+    for j in range(n):
+        if matriz[i][j] == 1:
+            cont += 1
+    if cont != 1:
+        teste_lin = False
+        break
+
+# Testando as colunas
+teste_col = True
+for j in range(n):
+    cont = 0
+    for i in range(n):
+        if matriz[i][j] == 1:
+            cont += 1
+    if cont != 1:
+        teste_col = False
+        break
+
+if teste_lin and teste_col:
+    print('\nÉ uma matriz de permutação')
+else:
+    print('\nNão é uma matriz de permutação') 
