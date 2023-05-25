@@ -15,7 +15,7 @@ for i in range(n):
     menorValor = vetor[0]
     indice_menorValor = 0
 
-for i in range(1, n):
+for i in range(n):
     if vetor[i] > maiorValor:
         maiorValor = vetor[i]
         indice_maiorValor = i
