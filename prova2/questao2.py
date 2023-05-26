@@ -1,29 +1,26 @@
+# Lendo a 
 import random
+matriz = []
+for i in range(10):
+    linha = []
+    for j in range(12):
+        valor = random.randint(10,100)
+        linha.append(valor)
+    matriz.append(linha)
 
-linhas = 10
-colunas = 12
-soma_linhas = 0
+# Listando a soma dos números da primeira linha
+primeira_linha = matriz[0]
+soma_primeira_linha = sum(primeira_linha)
+print("Soma dos números da primeira linha:", soma_primeira_linha)
 
-matriz = [[None]* colunas for i in range(linhas)]
+# Calculando a média da última coluna
+ultima_coluna = [linha[-1] for linha in matriz]
+media = sum(ultima_coluna) / len(ultima_coluna)
+print("Média da última coluna:", media)
 
-for i in range(linhas):
-    for j in range(colunas):
-        matriz[i][j] = random.randint(10,100)
-
-
-print('\nMatriz')
-for i in range(linhas):
-    for j in range(colunas):
-        print(f'{matriz[i][j]:4}',end='')
+# Exibindo a matriz completa
+print("\nMatriz completa:")
+for linha in matriz:
+    for valor in linha:
+        print(valor, end="\t")
     print()
-
-
-
-
-for i in range(linhas-9):
-    soma_linhas = soma_linhas + i
-print(soma_linhas)
-
-    
-
-    
