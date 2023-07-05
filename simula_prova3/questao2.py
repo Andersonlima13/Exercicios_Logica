@@ -1,7 +1,5 @@
 def encontrar_maior_valor(vetor):
-    if len(vetor) == 0:
-        print("O vetor está vazio.")
-        return None
+   
 
     maior = vetor[0]
     for elemento in vetor:
